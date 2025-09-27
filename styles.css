@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background-color: lightblue;
+    color: white;
+    text-transform: uppercase;
+}
+
+.content{
+    font-size: 12px;
+    background-image: url('sunflower.jpg');
+    width: 100%;
+    height: 100vh;
+    /* margin-top: -70px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.content div:nth-child(1){
+    font-size: 19em;
+    font-weight: bold;
+}
+
+.flower{
+    background-image: url('sun.png');
+    background-size: contain;
+    border-radius: 0;
+    position: absolute;
+    animation: flowerFall 10s linear;
+    z-index: 2;
+
+}
+
+@keyframes flowerFall {
+    0%{
+        top: 0;
+        opacity: 0;
+        transform: translateX(-5px);
+    }
+    10%{
+        opacity: 1;
+        transform: translateX(5px);
+    }
+    20%{
+        transform: translateX(-5px);
+    }
+    30%{
+        opacity: 1;
+        transform: translateX(5px);
+    }
+    40%{
+        transform: translateX(-5px);
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        top: 100vh;
+        opacity: 0;
+    }
+}
